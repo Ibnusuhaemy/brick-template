@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+        <title>MyBrick Email</title>
+        
+        <!-- Meta Tags -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="My Brick Email Template">
+        <meta name="keywords" content="MyBrick, Email, Template">
+        <meta name="author" content="My Brick">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Icon -->
+        <link rel="shortcut icon" href="images/mybrick-favicon.ico">
+        <link rel="icon" sizes="256x256" href="images/mybrick-favicon.ico">
+        <link rel="apple-touch-icon" sizes="256x256" href="images/mybrick-favicon.ico">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Fonts -->
+        
+        <!-- Avenir Roman -->
+        <!-- font-family: "Avenir"; -->
+        <link href="//db.onlinewebfonts.com/c/2184e38751bd90baea505aef3f313bda?family=Avenir" rel="stylesheet" type="text/css"/>
+        
+        <!-- Avenir Demi Bold -->
+        <!-- font-family: "AvenirNext LT Pro Regular"; -->
+        <link href="//db.onlinewebfonts.com/c/759caad8acd1a7a90accfec988fd1e67?family=AvenirNext+LT+Pro+Regular" rel="stylesheet" type="text/css"/>
+        
+        <!-- Avenir Black -->
+        <!-- font-family: "Avenir LT Std 65 Medium"; -->
+        <link href="//db.onlinewebfonts.com/c/9bbfdee4dee8c1149b3caa54178c1031?family=Avenir+LT+Std+65+Medium" rel="stylesheet" type="text/css"/>
+        
+        <!-- Stylesheets -->
+        <style>
+            /* --- Main --- */
+            html {
+                text-rendering: optimizeLegibility !important;
+                -webkit-font-smoothing: antialiased !important;
+                -moz-font-smoothing: antialiased !important;
+                font-smoothing: antialiased !important;
+            }
+            body{
+                background: #f9f9fa;
+                padding-top: 65px;
+                padding-bottom: 65px;
+            }
+            
+            /* --- List --- */
+            ul{
+                -webkit-padding-start: 0;
+                -moz-padding-start: 0px;
+                -ms-padding-start: 0px;
+                -o-padding-start: 0px;
+                list-style: none;
+                text-align: left;
+            }
+            ul.inline-item li{
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+            
+            
+            /* --- Images --- */
+            img{
+                display: block;
+                width: auto;
+                height: auto;
+                max-width: 100%;
+            }
+            
+            /* --- Basic Layout --- */
+            .mycontainer{
+                width: 100%;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .myrow:before,
+            .myrow:after{
+                display: block;
+                content: "";
+                clear: both;
+            }
+            .mycol-m-3{
+                width: 25%;
+                float: left;
+            }
+            .mycol-m-6{
+                width: 50%;
+                float: left;
+            }
+            .mycol-m-9{
+                width: 75%;
+                float: left;
+            }
+            
+            /* --- Panel --- */
+            .mypanel{
+                border: 1px solid #dfdfdf;
+                background: #fff;
+                margin-bottom: 24px;
+            }
+            
+            /* --- Heading --- */
+            h2, h4{
+                color: #005280;
+                line-height: normal;
+                letter-spacing: -0.005em;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+            h2{
+                font-family: 'Avenir LT Std 65 Medium', Fallback, sans-serif;
+                font-size: 27px;
+            }
+            h4{
+                font-family: 'AvenirNext LT Pro Regular', Fallback, sans-serif;
+                font-size: 22px;
+            }
+            
+            /* --- Paragraph --- */
+            p{
+                font-family: 'Avenir', Fallback, sans-serif;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .mypanel p{
+                color: #737373;
+            }
+            
+            /* --- Button --- */
+            .button{
+                font-family: 'Avenir LT Std 65 Medium', Fallback, sans-serif;
+                font-size: 13px;
+                color: #fff;
+                text-transform: uppercase;
+                line-height: normal;
+                border-radius: 4px;
+                padding: 15px 25px;
+                display: inline-block;
+                width: auto;
+            }
+            .button-blue{
+                background: #005280;
+            }
+            .button-lightred{
+                background: #ff0545;
+            }
+            
+            /* --- Links --- */
+            a{
+                text-decoration: none;
+                color: #005280;
+            }
+            a.button{
+                color: #fff;
+            }
+            :focus{
+                outline: none;
+            }
+            
+            /* --- Viewport --- */
+            @-ms-viewport{
+                width: device-width;
+            }
+            
+            /* --- Content --- */
+            /* - Header - */
+            .header-content{
+                padding: 25px 30px;
+                border-bottom: 1px solid #dfdfdf;
+            }
+            .header-content .button-header{
+                text-align: right;
+            }
+            .header-banner{
+                margin-top: 30px;
+            }
+            .header-desc{
+                border-top: 1px solid #dfdfdf;
+                padding: 30px;
+            }
+            .header-desc p{
+                font-size: 16px;
+                line-height: 29px;
+                letter-spacing: -0.005em;
+            }
+            
+            /* - Residence - */
+            .residence .mypanel{
+                padding: 35px 30px;
+            }
+            .residence .res-right{
+                padding-left: 30px;
+            }
+            .res-right h4{
+                margin-bottom: 12px;
+            }
+            .res-right p{
+                font-size: 15px;
+                line-height: 27px;
+                letter-spacing: -0.005em;
+            }
+            .res-right a{
+                margin-top: 25px;
+            }
+            
+            /* - Announcement - */
+            .announcement .mypanel{
+                padding: 35px 30px;
+            }
+            .announcement img{
+                margin-top: 30px;
+            }
+            .announcement .sm .button{
+                width: 45px;
+                height: 45px;
+                padding: 0;
+                position: relative;
+            }
+            .announcement .sm .fa{
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 8px;
+                height: 13px;
+            }
+            .announcement .text-sep{
+                margin-left: 5px;
+                margin-right: 10px;
+                opacity: 0.5;
+            }
+            
+            /* - Notice Description - */
+            .notice-desc p{
+                font-size: 14px;
+                line-height: 26px;
+                letter-spacing: -0.005em;
+                color: #a0a0ae;
+            }
+            .notice-desc .notice-box{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .notice-box.top{
+                margin-bottom: 30px;
+            }
+            .notice-box.middle{
+                margin-bottom: 25px;
+            }
+            .notice-box.bottom{
+                margin-bottom: 15px;
+            }
+            
+            @media screen and (max-width: 599px){
+                .mycol-s-12{
+                    width: 100%;
+                    float: none;
+                }
+                .header-content .button-header{
+                    text-align: left;
+                    margin-top: 15px;
+                }
+                .residence img{
+                    width: 100%;
+                }
+                .residence .res-right{
+                    padding-left: 0;
+                    margin-top: 20px;
+                }
+                .announcement img{
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+            }
+            
+            @media screen and (max-width: 479px){
+                ul.inline-item li{
+                    margin-top: 5px;
+                }
+                .announcement .text-sep{
+                    display: block;
+                }
+            }
+            
+        </style>
+                
+    </head>
+    <body>
+        
+        <header>
+            <div class="mycontainer">
+                <div class="mypanel">
+                    <div class="myrow header-content">
+                        <div class="mycol-s-12 mycol-m-6">
+                            <img src="https://image.ibb.co/ntY47Q/mybrick_logo_scaled.png" width="186" height="49" alt="MyBrick Logo">
+                        </div>
+                        <div class="mycol-s-12 mycol-m-6 button-header">
+                            <a href="#" class="button button-blue">Voir Site</a>
+                        </div>
+                    </div>                
+                    <div class="myrow header-banner">
+                        <img src="https://image.ibb.co/b1mP7Q/mybrick_banner.png" width="600" height="198" alt="My Brick Banner">
+                    </div>
+                    <div class="myrow header-desc">
+                        <h2>Chere Mme Johannson,</h2>
+                        <p>
+                            You've taken the first step in building up a property portfolio. Below are the current property now available
+                            on the MyBrick platform. We select only the best investment opportunities based on strict criteria.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="residence">
+            <div class="mycontainer">
+                <div class="mypanel">
+                    <div class="myrow">
+                        <div class="mycol-s-12 mycol-m-6">
+                            <img src="https://image.ibb.co/k4x9rk/mybrick_recidence_scaled.jpg" width="270" height="199" alt="My Brick Residence">
+                        </div>
+                        <div class="mycol-s-12 mycol-m-6">
+                            <div class="res-right">
+                                <h4>Residence de la Cour</h4>
+                                <p>Courrendlin, JU</p>
+                                <p>Etat Locatif: ###'###CHF</p>
+                                <p>Rendement annuel (est.): 6.5-7.0%</p>
+                                <a href="#" class="button button-lightred">Voir Propriete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="announcement">
+            <div class="mycontainer">
+                <div class="mypanel">
+                    <div class="myrow">
+                        <div class="mycol-s-12 mycol-m-3">
+                            <img src="https://image.ibb.co/h9k6Mk/mybrick_announcer_scaled.png" width="109" height="81" alt="Announcer Icon">
+                        </div>
+                        <div class="mycol-s-12 mycol-m-9">
+                            <h4>Inviter Vos Amis et Recevez 3000 CHF</h4>
+                            <p>
+                                Refer a friend to MyBrick and you'll both get a $100 Amazon gift card when they sign up and complete 
+                                their Investor Profile.
+                            </p>
+                            <ul class="inline-item">
+                                <li><a href="#" class="button button-lightred">Invitez vos amis</a></li>
+                                <li class="text-sep"><p>OR</p></li>
+                                <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-facebook"></i></a></li>
+                                <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-twitter"></i></a></li>
+                                <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="notice-desc">
+            <div class="mycontainer">
+                <div class="notice-box top">
+                    <p>
+                        IMPORTANT NOTICE : Tout investissement comporte des risques et l'immobilier n'echappe pas a la regle. La valeur
+                        des biens immobiliers peut augmenter comme diminuer. Les projections presentees ne sont qu'a titre indicatif et
+                        peuvent etre sujettes a des modifications. C'est pourquoi nous vous invitions a prendre connaissance des risques
+                        lies aux investissements immobiliers. Voir les Risks associes a I'investissement immobilier. Terms d'Utillisation
+                        | Confidentiale.
+                    </p>
+                </div>
+                <div class="notice-box middle">
+                    <p>
+                        DISCLAIMER: The information contained in this email is confidential and is only intended for the perusal of the 
+                        individual or entity named above and may contain information that is privileged, confidential and exempt from 
+                        disclosure under applicable law(s). If the reader of this email is not the intended recipient, it is hereby 
+                        notified that any dissemination, distribution or copying of such email communication is strictly prohibited. If 
+                        you have received this email in error, please notify the sender immediately and delete the email, 
+                        <br> thank you
+                    </p>
+                </div>
+                <div class="notice-box bottom">
+                    <p>myBrick SAm Avenue de Chailly 1, 1012 Lausanne</p>
+                </div>
+                <div class="notice-box note">
+                    <p>Want to change how you receive these emails?</p>
+                    <p>You can <a href="#">update your preferences</a> or <a href="#">unsubscribe from this list.</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Javascript -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        
+    </body>
+</html>
