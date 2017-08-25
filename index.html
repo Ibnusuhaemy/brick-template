@@ -8,7 +8,6 @@
         <meta name="description" content="My Brick Email Template">
         <meta name="keywords" content="MyBrick, Email, Template">
         <meta name="author" content="My Brick">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Icon -->
         <link rel="shortcut icon" href="images/mybrick-favicon.ico">
@@ -47,17 +46,19 @@
             
             /* --- List --- */
             ul{
-                -webkit-padding-start: 0;
+                -webkit-margin-before: 0px;
+                -webkit-margin-after: 0px;
+                -webkit-padding-start: 0px;
                 -moz-padding-start: 0px;
                 -ms-padding-start: 0px;
                 -o-padding-start: 0px;
                 list-style: none;
                 text-align: left;
             }
-            ul.inline-item li{
+            .inline-item .item{
                 display: inline-block;
                 vertical-align: middle;
-                margin-right: 5px;
+                margin: 15px 5px 5px 0;
             }
             
             
@@ -77,7 +78,8 @@
                 margin-right: auto;
             }
             .myrow:before,
-            .myrow:after{
+            .myrow:after,
+            .clearfix{
                 display: block;
                 content: "";
                 clear: both;
@@ -160,11 +162,6 @@
                 outline: none;
             }
             
-            /* --- Viewport --- */
-            @-ms-viewport{
-                width: device-width;
-            }
-            
             /* --- Content --- */
             /* - Header - */
             .header-content{
@@ -220,17 +217,14 @@
                 width: 45px;
                 height: 45px;
                 padding: 0;
-                position: relative;
+                text-align: center;
             }
             .announcement .sm .fa{
-                position: absolute;
                 margin: auto;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                width: 8px;
-                height: 13px;
+                display: inline-block;
+                padding-top: 14px;
+                padding-bottom: 14px;
+                vertical-align: top;
             }
             .announcement p{
                 font-size: 16px;
@@ -263,37 +257,40 @@
                 margin-bottom: 15px;
             }
             
-            @media screen and (max-width: 599px){
-                .mycol-s-12{
-                    width: 100%;
-                    float: none;
-                }
-                .header-content .button-header{
-                    text-align: left;
-                    margin-top: 15px;
-                }
-                .residence img{
-                    width: 100%;
-                }
-                .residence .res-right{
-                    padding-left: 0;
-                    margin-top: 20px;
-                }
-                .announcement img{
-                    margin-top: 0;
-                    margin-bottom: 20px;
-                }
-                .announcement .ann-right{
-                    padding-left: 0;
+            @media only screen and (max-device-width: 619px),
+            screen and (max-width: 619px){
+                .announcement .text-sep{
+                    display: block !important;
                 }
             }
             
-            @media screen and (max-width: 479px){
-                ul.inline-item li{
-                    margin-top: 5px;
+            @media only screen and (max-device-width: 599px),
+            screen and (max-width: 599px){
+                .mycol-s-12{
+                    width: 100% !important;
+                    float: none !important;
                 }
-                .announcement .text-sep{
-                    display: block;
+                .header-content .button-header{
+                    text-align: left !important;
+                    margin-top: 15px !important;
+                }
+                .residence img{
+                    width: 100% !important;
+                }
+                .residence .res-right{
+                    padding-left: 0 !important;
+                    margin-top: 20px !important;
+                }
+                .announcement img{
+                    margin-top: 0 !important;
+                    margin-bottom: 20px !important;
+                }
+                .announcement .sm .fa{
+                    margin-top: auto !important;
+                    margin-bottom: auto !important
+                }
+                .announcement .ann-right{
+                    padding-left: 0 !important;
                 }
             }
             
@@ -302,7 +299,7 @@
     </head>
     <body>
         
-        <header>
+        <div>
             <div class="mycontainer">
                 <div class="mypanel">
                     <div class="myrow header-content">
@@ -312,6 +309,7 @@
                         <div class="mycol-s-12 mycol-m-6 button-header">
                             <a href="#" class="button button-blue">Voir Site</a>
                         </div>
+                        <div class="clearfix"></div>
                     </div>                
                     <div class="myrow header-banner">
                         <img src="https://image.ibb.co/b1mP7Q/mybrick_banner.png" width="600" height="198" alt="My Brick Banner">
@@ -325,9 +323,9 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
         
-        <section class="residence">
+        <div class="residence">
             <div class="mycontainer">
                 <div class="mypanel">
                     <div class="myrow">
@@ -343,12 +341,13 @@
                                 <a href="#" class="button button-lightred">Voir Propriete</a>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         
-        <section class="announcement">
+        <div class="announcement">
             <div class="mycontainer">
                 <div class="mypanel">
                     <div class="myrow">
@@ -362,21 +361,34 @@
                                     Refer a friend to MyBrick and you'll both get a $100 Amazon gift card when they sign up and complete 
                                     their Investor Profile.
                                 </p>
-                                <ul class="inline-item">
-                                    <li><a href="#" class="button button-lightred">Invitez vos amis</a></li>
-                                    <li class="text-sep"><p>OR</p></li>
-                                    <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="sm"><a href="#" class="button button-blue"><i class="fa fa-linkedin"></i></a></li>
-                                </ul>
+                                <div class="inline-item">
+                                    <div class="item"><a href="#" class="button button-lightred">Invitez vos amis</a></div>
+                                    <div class="item text-sep"><p>OR</p></div>
+                                    <div class="item sm">
+                                        <a href="#" class="button button-blue">
+                                            <img src="https://image.ibb.co/eSmqXQ/facebook_icon.png" width="9"  height="16" class="fa">    
+                                        </a>
+                                    </div>
+                                    <div class="item sm">
+                                        <a href="#" class="button button-blue">
+                                            <img src="https://image.ibb.co/fVCKRk/twitter_icon.png" width="17"  height="14" class="fa">
+                                        </a>
+                                    </div>
+                                    <div class="item sm">
+                                        <a href="#" class="button button-blue">
+                                            <img src="https://image.ibb.co/n0w7CQ/linkedin_icon.png" width="19"  height="18" class="fa">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         
-        <section class="notice-desc">
+        <div class="notice-desc">
             <div class="mycontainer">
                 <div class="notice-box top">
                     <p>
@@ -405,7 +417,7 @@
                     <p>You can <a href="#">update your preferences</a> or <a href="#">unsubscribe from this list.</a></p>
                 </div>
             </div>
-        </section>
+        </div>
         
         <!-- Javascript -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
